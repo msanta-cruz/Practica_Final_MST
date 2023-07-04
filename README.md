@@ -36,5 +36,41 @@ Definición de una función llamada plots que toma como argumentos:
 		#titles: 
 		Una lista opcional de títulos para las imágenes. Por defecto, se establece en None.
 		
-		
-		
+# Utilización de Red Neuronal VGG16
+
+red neuronal VGG16 utilizando Keras y TensorFlow.
+
+# Dentro de la linea15 "keras.engine.training.Model"
+
+Comenzaremos a entrenar nuestro modelo 
+
+#
+Configuración de todas las capas como no entrenables, los pesos preentrenados (si los hay) se mantendrán sin cambios y solo se realizarán predicciones 
+basadas en esos pesos.
+
+#proceso de entrenamiento del modelo, como el optimizador, la función de pérdida y las métricas de evaluación.
+Se utiliza el optimizador Adam con una tasa de aprendizaje (learning rate) de 0.07. El optimizador Adam es una opción comúnmente utilizada en el entrenamiento de modelos de aprendizaje profundo.
+
+La función de pérdida se establece en 'categorical_crossentropy'.
+
+Esta función de pérdida se utiliza comúnmente en problemas de clasificación multiclase, cuando las etiquetas de clase se representan en forma de codificación one-hot.
+
+Por último, se especifica que la métrica de evaluación a utilizar durante el entrenamiento es 'accuracy', que representa la precisión (accuracy) del modelo en la clasificación de los datos.
+
+#Metodo de entrenamiento
+Para entrenar el modelo utilizando los datos de entrenamiento y validación especificados.
+
+En este caso, se utilizan los siguientes parámetros:
+
+		#train_batches: 
+		Representa los datos de entrenamiento, que pueden ser generados por un generador de datos o simplemente un conjunto de datos de numpy.
+		#steps_per_epoch=1: 
+		Indica el número de pasos que se tomarán en cada época de entrenamiento. En este caso, se toma solo un paso, lo que significa que se procesa solo un lote de datos en cada época.
+		#validation_data=test_batches: 
+		Representa los datos de validación, que también pueden ser generados por un generador de datos o un conjunto de datos de numpy.
+		#validation_steps=10: 
+		Indica el número de pasos que se tomarán durante la evaluación del modelo en cada época de validación. En este caso, se toman 10 pasos, lo que significa que se evalúan 10 lotes de datos en cada época de validación.
+		#epochs=20:
+		Especifica el número de épocas de entrenamiento. Cada época representa una pasada completa a través de los datos de entrenamiento.
+		#verbose=2: 
+		Controla el nivel de detalle de los mensajes de registro durante el entrenamiento. Un valor de 2 muestra una barra de progreso por cada época y muestra información detallada sobre el progreso del entrenamiento.
