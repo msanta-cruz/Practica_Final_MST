@@ -1,5 +1,25 @@
 # Practica_Final_MST
- Materia Tratamiento de Datos 
+
+Materia Tratamiento de Datos 
+
+Este repositorio proporciona una implementación de clasificación de imágenes usando una red neuronal convolucional que adapta y optimiza el modelo VGG16 pre-entrenado usando la técnica de transferencia de aprendizaje. 
+El modelo es capaz de clasificar imágenes de animales en las siguientes 8 clases:
+
+['CLASS_01', 'CLASS_02', 'CLASS_03', 'CLASS_04', 'CLASS_05', 'CLASS_06', 'CLASS_07', 'CLASS_08']
+
+Dependencies
+- Python
+- Frameworks
+- Matplotlib, Scikit-learn, Numpy, TensorFlow, Keras
+- Jupyter Notebook
+
+Entrene, pruebe y guarde el modelo
+
+Ejecute 'Proyecto_Final_MST.ipynb' con Jupyter Notebook. 
+Los datos de muestra en la carpeta de clases 'CLASS_01', 'CLASS_02', 'CLASS_03', 'CLASS_04', 'CLASS_05', 'CLASS_06', 'CLASS_07', 'CLASS_08' como referencia.
+
+Se pueden agregar sus propias imágenes o modificar el conjunto de datos por completo. 
+
 #ImageDataGenerator(): 
 
 Crea una instancia de la clase ImageDataGenerator, que se utiliza para generar lotes de datos de imágenes con aumento de datos opcional, preprocesamiento y otras configuraciones.
@@ -69,4 +89,13 @@ En este caso, se utilizan los siguientes parámetros:
 		#epochs=20:
 		Especifica el número de épocas de entrenamiento. Cada época representa una pasada completa a través de los datos de 		entrenamiento.
 		#verbose=2: 
-		Controla el nivel de detalle de los mensajes de registro durante el entrenamiento. Un valor de 2 muestra una barra de progreso por cada época y muestra información detallada sobre el progreso del entrenamiento.
+		Controla el nivel de detalle de los mensajes de registro durante el entrenamiento. Un valor de 2 muestra una barra 		de progreso por cada época y muestra información detallada sobre el progreso del entrenamiento.
+
+Resultado
+
+Los resultados de entrenar y probar el modelo en el conjunto de datos de muestra son los siguientes:
+Precisión de entrenamiento: 1.0000
+Pérdida de entrenamiento: 1.1913
+Precisión de validación: 1.0000
+Pérdida de validación: 2.1054
+
