@@ -65,12 +65,9 @@ Por último, se especifica que la métrica de evaluación a utilizar durante el 
 #Metodo de entrenamiento
 Para entrenar el modelo utilizando los datos de entrenamiento y validación especificados.
 
-En este caso, se utilizan los siguientes parámetros:
-
-		#train_batches: 
-		Representa los datos de entrenamiento, que pueden ser generados por un generador de datos o simplemente un conjunto de 		datos de numpy.
-		#steps_per_epoch=1: 
-		Indica el número de pasos que se tomarán en cada época de entrenamiento. En este caso, se toma solo un paso, lo que 		significa que se procesa solo un lote de datos en cada época.
+En este caso, se utilizan los siguientes parámetros:#train_batches: Representa los datos de entrenamiento, que pueden ser generados por un generador de datos o simplemente un conjunto de datos de numpy.
+#steps_per_epoch=1: 
+Indica el número de pasos que se tomarán en cada época de entrenamiento. En este caso, se toma solo un paso, lo que 		significa que se procesa solo un lote de datos en cada época.
 		#validation_data=test_batches: 
 		Representa los datos de validación, que también pueden ser generados por un generador de datos o un conjunto de datos 		de numpy.
 		#validation_steps=10: 
